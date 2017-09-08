@@ -1,0 +1,25 @@
+
+open HolKernel Parse boolLib bossLib;
+
+(*val _ = new_theory "test_regex";*)
+
+
+(* SML resources/links *)
+(* SML file system - http://sml-family.org/Basis/os-file-sys.html *)
+(* SML processes   - http://sml-family.org/Basis/os-process.html *)
+(* SML signatures  - https://www.cs.cmu.edu/~rwh/introsml/modules/sigstruct.htm *)
+(* SML functors    - http://www.cs.cornell.edu/courses/cs312/2006fa/recitations/rec08.html *)
+
+
+
+val hol = OS.Path.concat(Globals.HOLDIR, "bin/hol");
+
+val retTest = OS.Process.system (hol ^ "< performance.sml > performance.log");
+
+val () = if (OS.Process.isSuccess retTest) then () else failwith "Test was not successful, check 'performance.log'.";
+
+
+
+
+(*val _ = export_theory ();*)
+

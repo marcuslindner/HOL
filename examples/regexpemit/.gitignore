@@ -1,0 +1,13 @@
+
+*.ui
+*.uo
+
+*Theory.sig
+*Theory.sml
+.HOLMK
+.hollogs
+
+emit
+
+selftest.exe
+test/performance.log
