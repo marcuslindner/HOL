@@ -1,4 +1,4 @@
-INCLUDES = ./src ./test ./emit
+INCLUDES = ./src ./test
 
 all: selftest.exe
 

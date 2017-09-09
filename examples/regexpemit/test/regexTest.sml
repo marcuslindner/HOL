@@ -105,8 +105,8 @@ struct
       val regex = Seq (Rep (Any), Seq (Sym #"1", Seq (genRegex (Sym #"2") regexLength, Sym #"1")));
     in
       [
-        (201, true,  regex, longString ^ "1" ^ (implode (List.tabulate (regexLength, K #"2"))) ^ "1"),
-        (202, false, regex, longString ^ "1" ^ (implode (List.tabulate (regexLength, K #"1"))) ^ "1")
+        (201, true,  regex, longString ^ "1" ^ (implode (List.tabulate (regexLength, Lib.K #"2"))) ^ "1"),
+        (202, false, regex, longString ^ "1" ^ (implode (List.tabulate (regexLength, Lib.K #"1"))) ^ "1")
       ]
     end;
 (*
