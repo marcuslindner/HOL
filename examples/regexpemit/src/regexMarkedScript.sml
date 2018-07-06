@@ -361,7 +361,6 @@ val lang_of_MF_lang_of_M_F_thm = store_thm ("lang_of_MF_lang_of_M_F_thm", ``
   SIMP_TAC (std_ss++pred_setSimps.PRED_SET_ss) [lang_of_M_def]
 );
 
-(* TODO: is there a FLAT theorem that we don't find or don't know how to utilize it instead of making this here for simplifying parts of the bigger proof below? *)
 val FLAT_splitup_thm = store_thm ("FLAT_splitup_thm", ``
          (!c cs l. (c::cs = FLAT l) ==> (?ht tl.
                               (FLAT l = FLAT ((c::ht)::tl)) /\
@@ -376,7 +375,6 @@ val FLAT_splitup_thm = store_thm ("FLAT_splitup_thm", ``
 );
 
 
-(* TODO: are there further proof simplifications possible? or improved/more nice tactic composition? *)
 val lang_of_MF_shift_m_thm = store_thm ("lang_of_MF_shift_m_thm", ``
          (!mr c cs m. (cs IN (lang_of_MF (shift m mr c))) <=>
                     ((c::cs) IN (lang_of_M m mr)))
