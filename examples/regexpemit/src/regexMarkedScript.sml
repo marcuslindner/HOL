@@ -14,7 +14,7 @@ open regexExecutableTheory;
 (* ----------------------------------------------------------------------------- *)
 val _ = Datatype regexDatatypes.MReg_datatype_quot;
 
-(* TODO: store this in Theory as well? how? *)
+(* this could possibly part of the theory file *)
 val MReg_rws = type_rws ``:'a MReg``; (*fetch "-" "MReg_distinct"*)
 val MReg_rw  = LIST_CONJ MReg_rws;
 val MReg_ss  = rewrites MReg_rws;
