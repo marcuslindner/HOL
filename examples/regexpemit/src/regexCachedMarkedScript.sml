@@ -15,7 +15,7 @@ open regexMarkedTheory;
 (* ----------------------------------------------------------------------------- *)
 val _ = Datatype regexDatatypes.CMReg_datatype_quot;
 
-(* TODO: also in theory file? *)
+(* this could possibly part of the theory file *)
 val CMReg_rws = type_rws ``:'a CMReg``;
 val CMReg_rw  = LIST_CONJ CMReg_rws;
 val CMReg_ss  = rewrites CMReg_rws;
