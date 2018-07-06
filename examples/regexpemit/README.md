@@ -14,6 +14,8 @@ An extendable test and benchmark library is used for conformance testing in the 
 
 This is the project work of Andreas and Marcus Lindner in the ITP course, which was given in spring 2017 at KTH, Stockholm. We want to credit Thomas Tuerk for his help and comments during the course and this project. Furthermore, we provide the sources of further inspirations in the code in form of links in comments.
 
+The course slides can be found under the [documentation section](https://hol-theorem-prover.org/#doc) of the HOL web page and is linked [here](https://hol-theorem-prover.org/hol-exercises.tar.gz).
+
 
 ## Limitations
 
@@ -22,8 +24,10 @@ The regular expression data structure only allows epsilon, a symbol of type α, 
 
 ## How to compile
 
-1. Clone the repository using `git clone https://gitr.sys.kth.se/lindnera/itp2017-regexproj.git`.
-1. Compile the project by running `Holmake` in the project root directory.
+<!-- 1. Clone the repository using `git clone https://gitr.sys.kth.se/lindnera/itp2017-regexproj.git`. -->
+1. Compile the example by:
+  * running `Holmake` in this directory, or
+  * build HOL using selftest level 2 by using `bin/build -t2` (this is handled by HOL's `tools/build-sequence` file as usual).
 1. Run a selftest using `./selftest.exe` to check for conformance of the emitted code with respect to the reference library.
 1. Run a performance test by running `hol < test/performance.sml > test/performance.log` in the project root directory.
 

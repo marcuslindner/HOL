@@ -1,13 +1,19 @@
-
-*.ui
-*.uo
-
-*Theory.sig
-*Theory.sml
-.HOLMK
-.hollogs
+# some ignores only for this example project
+# ------------
 
 emit
-
-selftest.exe
 test/performance.log
+
+
+# standard ignores
+# ------------
+
+#*.ui
+#*.uo
+
+#*Theory.sig
+#*Theory.sml
+#.HOLMK
+#.hollogs
+
+#selftest.exe
